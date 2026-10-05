@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MLBB Skin Scanner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status"><span>10:22</span><span>▮▮ ᯤ  ◉ 100%</span></div>
+  <div class="top-accent"><span>✦</span><i></i><b></b></div>
+
+  <header class="appbar">
+    <div class="brand">SKIN SCANNER <small>MLBB COLLECTION</small></div>
+    <button class="round" onclick="toggleTheme()">◐</button>
+  </header>
+
+  <main>
+    <div class="tabs"><button class="active">Photos</button><button>Collections</button><button class="dots">⋮</button></div>
+
+    <section class="preview-strip" id="previewStrip">
+      <div class="empty">Upload your screenshots to see your<br>full skin collection here</div>
+    </section>
+
+    <section class="panel upload-panel">
+      <div class="panel-title"><h2>Add your skins</h2><p>Upload screenshots of your in-game skin collection<br>to auto-detect them, or use “Manual” to search<br>and add skins by name.</p></div>
+      <div class="drop" id="drop">
+        <div class="cloud">☁</div>
+        <p>Tap to upload skin grid screenshots or a<br>screen recording</p>
+        <label class="filebtn">Choose files <input id="files" type="file" accept="image/*,video/*" multiple><span id="fileCount">No file chosen</span></label>
+      </div>
+      <div class="reading"><span>Reading skin names...</span><b id="pct">0%</b></div>
+      <div class="progress"><i id="progress"></i></div>
+      <div class="detect-row"><button class="detected" id="detected">✦ Detected ( 0 )</button><button class="manual">⌕ Manual</button></div>
+      <div class="skin-grid" id="skinGrid"></div>
+    </section>
+  </main>
+
+  <nav class="bottom">
+    <button>▣<small>Header</small></button>
+    <button>◆<small>Elements</small></button>
+    <button class="selected">♛<small>Skins</small></button>
+    <button>☷<small>Style</small></button>
+    <button>⇩<small>Export</small></button>
+  </nav>
+</div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
